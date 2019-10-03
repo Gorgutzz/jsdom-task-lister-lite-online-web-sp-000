@@ -1,18 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   // your code here
-  const form = document.getElementById("create-task-form");
-  form.addEventListener("submit", function(e){
-    let task = document.getElementById("new-task-description").value;
-    let li = document.createElement("li")
-    li.textContent = task;
-    const task_list = document.getElementById("tasks");
-    task_list.appendChild(li);
+  let task_form = document.getElementById('create-task-form')
+  task_form.addEventListener('submit', function(e) {
     e.preventDefault();
-
-    taskUl.addEventListener("click", (e) => {
-      if (e.target.nodeName === "BUTTON") {
-        task_list.deleteTask(e.target.dataset.description);
-        renderApp();
-      }
+    let new_task = document.getElementById('new-task-description')
+    let tasks_list = document.getElementById('tasks')
+    let li = document.createElement('li');
+    li.innerHTML = new_task.value
+    tasks_list.appendChild(li)
+    new_task.value = ''
   });
 });
