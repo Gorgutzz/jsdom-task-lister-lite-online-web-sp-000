@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("create-task-form");
   form.addEventListener("submit", function(e){
     let task = document.getElementById("new-task-description").value;
-    let new_el = document.createElement("li")
-    new_el.textContent = task;
+    let li = document.createElement("li")
+    li.textContent = task;
     const taskList = document.getElementById("tasks");
-    taskList.appendChild(new_el);
+    taskList.appendChild(li);
     e.preventDefault();
   });
 });
