@@ -8,5 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const task_list = document.getElementById("tasks");
     task_list.appendChild(li);
     e.preventDefault();
+
+    taskUl.addEventListener("click", (e) => {
+      if (e.target.nodeName === "BUTTON") {
+        taskList.deleteTask(e.target.dataset.description);
+        renderApp();
+      }
   });
 });
