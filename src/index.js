@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let li = document.createElement("li")
     li.textContent = task;
     const task_list = document.getElementById("tasks");
-    taskList.appendChild(li);
+    task_list.appendChild(li);
     e.preventDefault();
   });
 });
